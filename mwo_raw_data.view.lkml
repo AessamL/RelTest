@@ -119,6 +119,7 @@ view: mwo_raw_data {
   }
 
   dimension_group: rfr {
+    description: "Actuall Notification Time"
     type: time
     timeframes: [
       raw,
