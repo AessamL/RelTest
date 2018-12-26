@@ -170,7 +170,7 @@ view: mwo_raw_data {
   }
 
   dimension: task_dur {
-    type: duration_hour
+    type: date_time
     sql: ${TABLE}.task_dur ;;
   }
 
