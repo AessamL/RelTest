@@ -208,9 +208,9 @@ view: mwo_raw_data {
   }
 
   measure:  Min_MWO_Start {
-    type: date_time
+    type: min
     sql: (SELECT MIN(start_time) FROM pegasus.mwo_raw_data GROUP BY rfr_no HAVING COUNT(*) > 1);;
-    convert_tz: no
+    #convert_tz: no
   }
 
   measure: Max_MWO_Task_End {
