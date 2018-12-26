@@ -8,6 +8,7 @@ view: mwo_raw_data {
   }
 
   dimension: access_time {
+    description: "Time Between RFR and First Assessment by an Engineer "
     type: string
     sql: ${TABLE}.access_time ;;
   }
