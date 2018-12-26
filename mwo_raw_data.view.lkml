@@ -207,6 +207,17 @@ view: mwo_raw_data {
     sql: ${TABLE}.wo_type ;;
   }
 
+  measure:  Min_MWO_Start {
+    type: date_time
+    sql: MIN(${start_time}) ;;
+    convert_tz: no
+  }
+
+  measure: Max_MWO_Task_End {
+    type: date_time
+    sql: MAX(${end_time});;
+    convert_tz: no
+  }
   measure: count {
     type: count
     drill_fields: [id]
