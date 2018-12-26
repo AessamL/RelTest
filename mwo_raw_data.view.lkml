@@ -207,7 +207,7 @@ view: mwo_raw_data {
     sql: ${TABLE}.wo_type ;;
   }
 
-  dimension:  Min_MWO_Start {
+  measure:  Min_MWO_Start {
     type: date_time
     sql: (SELECT MIN(start_time) FROM pegasus.mwo_raw_data WHERE wo IN (SELECT wo FROM pegasus.mwo_raw_data GROUP BY wo HAVING COUNT(*) > 1));;
     convert_tz: no
