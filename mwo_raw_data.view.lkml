@@ -209,7 +209,7 @@ view: mwo_raw_data {
 
   measure:  Min_MWO_Start {
     type: date_time
-    sql: (SELECT start_time FROM pegasus.mwo_raw_data WHERE wo IN (SELECT wo FROM pegasus.mwo_raw_data GROUP BY wo HAVING COUNT(*) > 1));;
+    sql: (SELECT MIN(start_time) FROM pegasus.mwo_raw_data WHERE wo IN (SELECT wo FROM pegasus.mwo_raw_data GROUP BY wo HAVING COUNT(*) > 1));;
     convert_tz: no
   }
 
