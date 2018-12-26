@@ -1,0 +1,208 @@
+view: mwo_raw_data {
+  sql_table_name: pegasus.mwo_raw_data ;;
+
+  dimension: id {
+    primary_key: yes
+    type: number
+    sql: ${TABLE}.id ;;
+  }
+
+  dimension: access_time {
+    type: string
+    sql: ${TABLE}.access_time ;;
+  }
+
+  dimension: assess_dur {
+    type: string
+    sql: ${TABLE}.assess_dur ;;
+  }
+
+  dimension_group: assess {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.assess_time ;;
+  }
+
+  dimension: bds {
+    type: string
+    sql: ${TABLE}.bds ;;
+  }
+
+  dimension: cause {
+    type: string
+    sql: ${TABLE}.cause ;;
+  }
+
+  dimension: comments {
+    type: string
+    sql: ${TABLE}.comments ;;
+  }
+
+  dimension_group: end {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.end_time ;;
+  }
+
+  dimension: issue_status {
+    type: string
+    sql: ${TABLE}.issue_status ;;
+  }
+
+  dimension: issues_order {
+    type: number
+    sql: ${TABLE}.issues_order ;;
+  }
+
+  dimension: location {
+    type: string
+    sql: ${TABLE}.location ;;
+  }
+
+  dimension: mode {
+    type: string
+    sql: ${TABLE}.mode ;;
+  }
+
+  dimension_group: notif {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.notif_time ;;
+  }
+
+  dimension: plan_dur {
+    type: string
+    sql: ${TABLE}.plan_dur ;;
+  }
+
+  dimension_group: plan {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.plan_time ;;
+  }
+
+  dimension: pm_type {
+    type: string
+    sql: ${TABLE}.pm_type ;;
+  }
+
+  dimension_group: rfr {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.rfr_date ;;
+  }
+
+  dimension: rfr_decision {
+    type: string
+    sql: ${TABLE}.rfr_decision ;;
+  }
+
+  dimension: rfr_no {
+    type: string
+    sql: ${TABLE}.rfr_no ;;
+  }
+
+  dimension: rfr_status {
+    type: string
+    sql: ${TABLE}.rfr_status ;;
+  }
+
+  dimension: sort {
+    type: string
+    sql: ${TABLE}.sort ;;
+  }
+
+  dimension_group: start {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.start_time ;;
+  }
+
+  dimension: task_dur {
+    type: string
+    sql: ${TABLE}.task_dur ;;
+  }
+
+  dimension: total_time {
+    type: string
+    sql: ${TABLE}.total_time ;;
+  }
+
+  dimension: vehicle_logo {
+    type: string
+    sql: ${TABLE}.vehicle_logo ;;
+  }
+
+  dimension: wo {
+    type: string
+    sql: ${TABLE}.wo ;;
+  }
+
+  dimension: wo_closedby {
+    type: string
+    sql: ${TABLE}.wo_closedby ;;
+  }
+
+  dimension: wo_km {
+    type: number
+    sql: ${TABLE}.wo_km ;;
+  }
+
+  dimension: wo_type {
+    type: string
+    sql: ${TABLE}.wo_type ;;
+  }
+
+  measure: count {
+    type: count
+    drill_fields: [id]
+  }
+}
