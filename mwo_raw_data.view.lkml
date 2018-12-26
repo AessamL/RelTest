@@ -49,6 +49,7 @@ view: mwo_raw_data {
   }
 
   dimension_group: end {
+    description: "Task End Time"
     type: time
     timeframes: [
       raw,
@@ -156,6 +157,7 @@ view: mwo_raw_data {
   }
 
   dimension_group: start {
+    description: "Task Start Time"
     type: time
     timeframes: [
       raw,
