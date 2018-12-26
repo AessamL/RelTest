@@ -20,6 +20,7 @@ view: mwo_raw_data {
   }
 
   dimension_group: assess {
+    description: "The Start of Assessment"
     type: time
     timeframes: [
       raw,
