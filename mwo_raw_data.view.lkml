@@ -209,7 +209,7 @@ view: mwo_raw_data {
 
   measure:  Min_MWO_Start {
     type: date_time
-    sql: MIN(${start_time}) ;;
+    sql: MIN(${TABLE}.start_time) ;;
     convert_tz: no
 
   }
@@ -222,6 +222,7 @@ view: mwo_raw_data {
   }
 measure: WODuration {
   sql: TIMEDIFF(${Max_MWO_Task_End},${Min_MWO_Start}) ;;
+  value_format: ""
 }
 
   measure: count {
