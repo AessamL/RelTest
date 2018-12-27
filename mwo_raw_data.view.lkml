@@ -220,9 +220,12 @@ view: mwo_raw_data {
     convert_tz: no
 
   }
-measure: WODuration {
+measure: WODurationHour {
   sql: TIMESTAMPDIFF(HOUR,${Min_MWO_Start},${Max_MWO_Task_End}) ;;
-
+}
+measure: WODurationTIME {
+  type: date_hour
+  sql: DATEDIFF(${Max_MWO_Task_End},${Min_MWO_Start}) ;;
 }
 
   measure: count {
