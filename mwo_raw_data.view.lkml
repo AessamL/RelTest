@@ -216,7 +216,7 @@ view: mwo_raw_data {
 
   measure: Max_MWO_Task_End {
     type: date_time
-    sql: MAX(${end_time});;
+    sql:${TABLE}.end_time;;
     convert_tz: no
   }
   measure: count {
