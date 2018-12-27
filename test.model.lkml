@@ -10,12 +10,27 @@ datagroup: test_default_datagroup {
 
 persist_with: test_default_datagroup
 
-explore: gp_inv_trx {}
+explore: gp_inv_trx {
+  hidden: yes
 
-explore: mwo_items {}
+}
 
-explore: mwo_raw_data {}
+explore: mwo_items {
+  hidden: yes
 
-explore: rfr_raw_data {}
+}
 
-explore: test {}
+explore: mwo_raw_data {
+  hidden: yes
+
+}
+
+explore: rfr_raw_data {
+  hidden: yes
+
+}
+
+explore: test {
+  hidden: yes
+
+}
