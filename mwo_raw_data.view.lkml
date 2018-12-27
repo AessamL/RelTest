@@ -224,7 +224,7 @@ measure: WODurationHour {
   sql: TIMESTAMPDIFF(HOUR,${Min_MWO_Start},${Max_MWO_Task_End}) ;;
 }
 measure: WODurationTIME {
-  type: date_hour
+  type: date_time
   sql: DATEDIFF(${Max_MWO_Task_End},${Min_MWO_Start}) ;;
 }
 
