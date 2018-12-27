@@ -175,6 +175,7 @@ view: mwo_raw_data {
   dimension: task_dur {
     type: date_time
     sql: ${TABLE}.task_dur ;;
+    description: "Work Order Duration"
   }
 
   dimension: total_time {
