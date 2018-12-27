@@ -211,13 +211,12 @@ view: mwo_raw_data {
     type: date_raw
     sql: MIN(${start_time}) ;;
 
-    #convert_tz: no
   }
 
   measure: Max_MWO_Task_End {
     type: date_raw
     sql:MAX(${TABLE}.end_time);;
-   #convert_tz: no
+
   }
 
 
