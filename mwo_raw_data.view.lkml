@@ -220,8 +220,8 @@ view: mwo_raw_data {
     convert_tz: no
 
   }
-dimension: WODuration {
-  type: duration_hour
+measure: WODuration {
+  type: number
   sql: DATEDIFF(${Max_MWO_Task_End},${Min_MWO_Start}) ;;
 }
 
