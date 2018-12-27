@@ -208,14 +208,14 @@ view: mwo_raw_data {
   }
 
   measure:  Min_MWO_Start {
-    type: date_time
+    type: date
     sql: MIN(${TABLE}.start_time ;;
 
     convert_tz: no
   }
 
   measure: Max_MWO_Task_End {
-    type: date_time
+    type: date
     sql: MAX(${TABLE}.end_time);;
     convert_tz: no
   }
