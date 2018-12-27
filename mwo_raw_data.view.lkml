@@ -225,6 +225,7 @@ measure: WODurationHour {
 }
 measure: WODurationTIME {
   sql: TIME_FORMAT(TIMEDIFF(${Max_MWO_Task_End},${Min_MWO_Start}), '%H:%i') ;;
+  #We Can Add More Formating if Needed
 }
 
   measure: count {
