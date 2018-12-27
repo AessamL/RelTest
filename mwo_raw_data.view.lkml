@@ -221,7 +221,7 @@ view: mwo_raw_data {
 
   }
 measure: WODuration {
-  sql: TIMESTAMPDIFF(HOUR,${Max_MWO_Task_End},${Min_MWO_Start}) ;;
+  sql: TIMESTAMPDIFF(HOUR,${Min_MWO_Start},${Max_MWO_Task_End}) ;;
 
 }
 
