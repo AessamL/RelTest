@@ -221,7 +221,7 @@ view: mwo_raw_data {
 
   }
 measure: WODuration {
-  type: number
+  type: date_hour
   sql: DATEDIFF(${Max_MWO_Task_End},${Min_MWO_Start}) ;;
 }
 
