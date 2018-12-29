@@ -201,7 +201,7 @@ view: mwo_raw_data {
     type: string
     sql:
     CASE
-    WHEN ${TABLE}.vehicle_logo LIKE '%Truck%' THEN REGEXP(${TABLE}.vehicle_logo ,[^truck].*)
+    WHEN ${TABLE}.vehicle_logo LIKE '%Truck%' THEN REGEXP([^truck].*)
         ELSE 'NA'
       END ;;
   }
