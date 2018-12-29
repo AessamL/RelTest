@@ -188,6 +188,18 @@ view: mwo_raw_data {
     type: string
     sql: ${TABLE}.vehicle_logo ;;
   }
+  dimension: AssetType {
+    type: string
+    sql:  |
+    CASE
+        WHEN ${vehicle_logo} LIKE '%Truck%' THEN 'Truck'
+        WHEN ${vehicle_logo} LIKE '%Trailer%' THEN 'Trailer'
+        ELSE 'NA'
+      END
+  }
+  dimension: VehicleLogo {
+    type: string
+  }
 
   dimension: wo {
     type: string
