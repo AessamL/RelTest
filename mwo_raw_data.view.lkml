@@ -183,25 +183,12 @@ view: mwo_raw_data {
     sql: ${TABLE}.total_time ;;
   }
 
-  parameter: Vehicle_granularity {
-    type: string
-    allowed_value: { value: "Truck" }
-    allowed_value: { value: "Trailer" }
-  }
+
   dimension: vehicle_logo {
     type: string
     sql: ${TABLE}.vehicle_logo ;;
   }
-dimension: VehicleTest {
-  label_from_parameter: Vehicle_granularity
-  sql: {% if Vehicle_granularity._parameter_value == "'Truck'" %}
-      ${vehicle_logo}::VARCHAR
-       {% elsif Vehicle_granularity._parameter_value == "'Trailer'" %}
-      ${vehicle_logo}::VARCHAR
-      {% else %}
-      NULL
-      {% endif %};;
-}
+
   dimension: wo {
     type: string
     sql: ${TABLE}.wo ;;
