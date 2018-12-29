@@ -199,7 +199,7 @@ view: mwo_raw_data {
   }
   dimension: VehicleLogo {
     type: string
-    sql:REGEXP_EXTRACT(${TABLE}.vehicle_logo ,'[^truck]')
+    sql:REGEXP(${TABLE}.vehicle_logo ,'[^truck]')
         ;;
   }
 
