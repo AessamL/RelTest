@@ -199,12 +199,7 @@ view: mwo_raw_data {
   }
   dimension: VehicleLogo {
     type: string
-    sql:
-    CASE
-        WHEN ${TABLE}.vehicle_logo LIKE '%Truck%' THEN RLIKE '[^truck].*'
-
-        ELSE 'NA'
-      END
+    sql:REGEXP_EXTRACT(${TABLE}.vehicle_logo ,'[^truck]')
         ;;
   }
 
