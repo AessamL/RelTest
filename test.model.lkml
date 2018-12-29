@@ -21,7 +21,7 @@ explore: mwo_items {
 }
 
 explore: mwo_raw_data {
-  hidden: yes
+  hidden: no
 
 }
 
