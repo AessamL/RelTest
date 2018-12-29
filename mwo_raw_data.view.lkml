@@ -192,8 +192,8 @@ view: mwo_raw_data {
     type: string
     sql:
     CASE
-        WHEN ${vehicle_logo} LIKE '%Truck%' THEN 'Truck'
-        WHEN ${vehicle_logo} LIKE '%Trailer%' THEN 'Trailer'
+        WHEN ${TABLE}.vehicle_logo LIKE '%Truck%' THEN 'Truck'
+        WHEN ${TABLE}.vehicle_logo LIKE '%Trailer%' THEN 'Trailer'
         ELSE 'NA'
       END ;;
   }
