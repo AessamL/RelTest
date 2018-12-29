@@ -190,7 +190,7 @@ view: mwo_raw_data {
   }
   dimension: AssetType {
     type: string
-    sql:  |
+    sql:
     CASE
         WHEN ${vehicle_logo} LIKE '%Truck%' THEN 'Truck'
         WHEN ${vehicle_logo} LIKE '%Trailer%' THEN 'Trailer'
