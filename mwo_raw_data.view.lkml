@@ -200,8 +200,8 @@ view: mwo_raw_data {
   dimension: VehicleLogo {
     type: string
     sql:CASE
-        WHEN ${TABLE}.vehicle_logo LIKE '%Truck%' THEN REPLACE (${TABLE}.vehicle_logo, "Truck", "")
-        WHEN ${TABLE}.vehicle_logo LIKE '%Trailer%' THEN REPLACE (${TABLE}.vehicle_logo, "Trailer", "")
+        WHEN ${TABLE}.vehicle_logo LIKE '%Truck%' THEN SUBSTRING (${TABLE}.vehicle_logo,, 5, 20)
+        WHEN ${TABLE}.vehicle_logo LIKE '%Trailer%' THEN SUBSTRING (${TABLE}.vehicle_logo, , 7, 20)
         ELSE 'NA'
       END
         ;;
