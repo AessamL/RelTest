@@ -199,7 +199,11 @@ view: mwo_raw_data {
   }
   dimension: VehicleLogo {
     type: string
-    sql:REGEXP(${vehicle_logo} ,'\btruck\b')
+    sql:CASE
+        WHEN ${TABLE}.vehicle_logo LIKE '%Truck%' THEN REPLACE (${TABLE}.vehicle_logo, "Truck", "")
+        WHEN ${TABLE}.vehicle_logo LIKE '%Trailer%' THEN REPLACE (${TABLE}.vehicle_logo, "Trailer", "")
+        ELSE 'NA'
+      END
         ;;
   }
 
