@@ -11,12 +11,12 @@ datagroup: test_default_datagroup {
 persist_with: test_default_datagroup
 
 explore: gp_inv_trx {
-  hidden: yes
+  hidden: no
 
 }
 
 explore: mwo_items {
-  hidden: yes
+  hidden: no
 
 }
 
