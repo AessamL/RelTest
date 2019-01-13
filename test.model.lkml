@@ -19,6 +19,7 @@ explore: mwo_items {
   hidden: yes
 
 }
+explore: sql_runner_queryasmeasure {}
 
 explore: mwo_raw_data {
   hidden: no
