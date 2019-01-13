@@ -19,9 +19,15 @@ explore: mwo_items {
   hidden: yes
 
 }
-explore: sql_runner_queryasmeasure {}
+explore: sql_runner_queryasmeasure {
+
+}
 
 explore: mwo_raw_data {
+  join: sql_runner_queryasmeasure {
+    sql_on: ${sql_runner_queryasmeasure.mwo_raw_data_rfr_no} = ${mwo_raw_data.rfr_no} ;;
+    relationship: many_to_many
+  }
   hidden: no
 
 }
