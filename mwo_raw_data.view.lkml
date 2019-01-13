@@ -226,6 +226,9 @@ view: mwo_raw_data {
     type: string
     sql: ${TABLE}.wo_type ;;
   }
+  dimension: StartD {
+    sql:(SELECT * FROM ${sql_runner_queryasmeasure.SQL_TABLE_NAME}) ;;
+  }
 
   measure:  Min_MWO_Start {
     type: date_time
