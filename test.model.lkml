@@ -20,7 +20,10 @@ explore: mwo_items {
 
 }
 explore: sql_runner_queryasmeasure {
-
+join: mwo_raw_data {
+  sql_on: ${sql_runner_queryasmeasure.mwo_raw_data_rfr_no} = ${mwo_raw_data.rfr_no} ;;
+  relationship: one_to_one
+}
 }
 
 explore: mwo_raw_data {
