@@ -26,7 +26,7 @@ explore: sql_runner_queryasmeasure {
 explore: mwo_raw_data {
   join: sql_runner_queryasmeasure {
     sql_on: ${sql_runner_queryasmeasure.mwo_raw_data_rfr_no} = ${mwo_raw_data.rfr_no} ;;
-    relationship: many_to_many
+    relationship: one_to_one
   }
   hidden: no
 
